@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Sueños Valenti</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="<%= theme %>">
+    <a href="/" class="home-link">⬅ Home</a>
+
+    <div class="form-container">
+        <h1>Login</h1>
+
+        <% if (error) { %>
+            <div class="error-list">
+                <%= error %>
+            </div>
+            <% } %>
+
+                <form method="POST" action="/login">
+
+                    <label>Email
+                        <input type="email" name="email" value="<%= formData.email || '' %>">
+                    </label>
+
+                    <button type="submit">Login</button>
+                </form>
+    </div>
+
+</body>
+
+</html>

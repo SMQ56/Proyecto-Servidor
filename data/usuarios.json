@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "name": "a",
+    "email": "aaaa12@gmail.com",
+    "age": 12,
+    "city": "bcn",
+    "interests": [
+      "Meditation"
+    ]
+  },
+  {
+    "name": "b",
+    "email": "bbbb20@gmail.com",
+    "age": 20,
+    "city": "bcn",
+    "interests": [
+      "Meditation",
+      "Energy",
+      "Meditation"
+    ]
+  },
+  {
+    "name": "s",
+    "email": "sss@s.s",
+    "age": 21,
+    "city": "bcn",
+    "interests": [
+      "Meditation",
+      "Energy"
+    ]
+  }
+]

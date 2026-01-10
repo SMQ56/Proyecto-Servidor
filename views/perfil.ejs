@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="<%= theme %>">
+
+    <a href="/" class="home-link">⬅ Home</a>
+
+    <div class="form-container">
+        <h1>Welcome, <%= user.name %>
+        </h1>
+
+        <p><strong>Email:</strong>
+            <%= user.email %>
+        </p>
+        <p><strong>Age:</strong>
+            <%= user.age %>
+        </p>
+        <p><strong>City:</strong>
+            <%= user.city %>
+        </p>
+
+        <p><strong>Interests:</strong></p>
+        <ul>
+            <% user.interests.forEach(i=> { %>
+                <li>
+                    <%= i %>
+                </li>
+                <% }) %>
+        </ul>
+
+        <a href="/logout">
+            <button>Logout</button>
+        </a>
+    </div>
+
+</body>
+
+</html>

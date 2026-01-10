@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Sueños Valenti</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="<%= theme %>">
+
+    <a href="/" class="home-link">⬅ Home</a>
+
+    <div class="form-container">
+        <h1>Register</h1>
+
+        <% if (errors.length> 0) { %>
+            <ul class="error-list">
+                <% errors.forEach(error=> { %>
+                    <li>
+                        <%= error %>
+                    </li>
+                    <% }) %>
+            </ul>
+            <% } %>
+
+                <form method="POST" action="/registro">
+
+                    <label>Name
+                        <input type="text" name="name" value="<%= formData.name || '' %>" required>
+                    </label>
+
+                    <label>Email
+                        <input type="email" name="email" value="<%= formData.email || '' %>" required>
+                    </label>
+
+                    <label>Age
+                        <input type="number" name="age" value="<%= formData.age || '' %>" required>
+                    </label>
+
+                    <label>City
+                        <input type="text" name="city" value="<%= formData.city || '' %>">
+                    </label>
+
+                    <label>Interests
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="interests" value="Meditation"> Meditation</label>
+                            <label><input type="checkbox" name="interests" value="Energy"> Energy</label>
+                            <label><input type="checkbox" name="interests" value="Mindfulness"> Mindfulness</label>
+                        </div>
+                    </label>
+
+                    <button type="submit">Create account</button>
+                </form>
+    </div>
+
+</body>
+
+</html>

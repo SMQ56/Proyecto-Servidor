@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="<%= theme %>">
+
+    <a href="/" class="home-link">⬅ Home</a>
+
+    <div class="form-container">
+        <h1>Preferences</h1>
+
+        <form method="POST" action="/preferencias">
+
+
+            <label>Theme</label>
+            <select name="theme">
+                <option value="light" <%=theme==="light" ? "selected" : "" %>>Light</option>
+                <option value="dark" <%=theme==="dark" ? "selected" : "" %>>Dark</option>
+            </select>
+
+
+            <button type="submit">Save preferences</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
